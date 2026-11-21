@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NLHE Poker Arena — Local Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <h1 id="title">NLHE Poker Arena</h1>
+      <p id="subtitle" class="muted">Offline local dashboard — loading tournament data…</p>
+    </div>
+    <div id="status-badge" class="badge">Loading</div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Standings (Pooled bb/100)</h2>
+      <div id="standings-wrap" class="table-wrap">
+        <p class="muted">No tournament data exported yet.</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Head-to-Head Matrix (bb/100)</h2>
+      <div id="matrix-wrap" class="table-wrap">
+        <p class="muted">Waiting for completed pairings.</p>
+      </div>
+    </section>
+
+    <section class="grid">
+      <div class="card">
+        <h2>Pairings</h2>
+        <div id="pairings-wrap" class="list-wrap">
+          <p class="muted">No pairings available.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="replay-header">
+          <h2 id="replay-title">Hand Replay Inspector</h2>
+          <div class="replay-controls">
+            <button id="prev-hand" type="button" disabled>Prev</button>
+            <span id="hand-counter" class="muted">—</span>
+            <button id="next-hand" type="button" disabled>Next</button>
+          </div>
+        </div>
+        <div id="replay-wrap">
+          <p class="muted">Select a pairing to inspect recorded hands and showdown details.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
